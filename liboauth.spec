@@ -1,6 +1,6 @@
 Name:           liboauth
 Version:        1.0.3
-Release:        12
+Release:        13
 Summary:        OAuth library functions
 License:        MIT
 URL:            http://liboauth.sourceforge.net/
@@ -39,6 +39,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 
 %ldconfig_scriptlets
 
+%check
+make check
+
 %files
 %doc AUTHORS COPYING.MIT README
 %{_libdir}/*.so.*
@@ -53,6 +56,9 @@ find %{buildroot} -name '*.la' -exec rm -f {} ';'
 %doc ChangeLog
 
 %changelog
+* Fri Feb 14 2020 openEuler Buildteam <buildteam@openeuler.org> - 1.0.3-13
+- Make check after installation
+
 * Fri Sep 6 2019 openEuler Buildteam <buildteam@openeuler.org> - 1.0.3-12
 - Package init
 
