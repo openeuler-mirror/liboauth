@@ -6,7 +6,7 @@ License:        MIT
 URL:            http://liboauth.sourceforge.net/
 Source0:        http://downloads.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
 
-BuildRequires:  gcc curl-devel nss-devel
+BuildRequires:  gcc libcurl-devel nss-devel
 
 %description
 a POSIX-C implementation of the http://oauth.net/ protocol. libOauth provides
